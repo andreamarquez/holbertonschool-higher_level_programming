@@ -32,11 +32,11 @@ def add_integer(a, b=98):
     # Check for infinity
     if abs(a) == float('inf') or abs(b) == float('inf'):
         raise OverflowError("value too large to convert to int")
-    
+
     # Check for large float values
     if abs(a) > 1e308 or abs(b) > 1e308:
         raise OverflowError("value too large to convert to int")
-    
+
     sum_ab = int(a) + int(b)
     if abs(sum_ab) > 1e308:  # Check for overflow in the sum
         raise OverflowError("sum too large to convert to int")
