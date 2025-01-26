@@ -1,5 +1,13 @@
 #!/usr/bin/python3
 
+"""
+This module provides a function to format text with specific indentation.
+
+The text_indentation function takes a string and prints the text with
+2 new lines after each of these characters: ., ? and :
+"""
+
+
 def text_indentation(text):
     """
     Prints a text with 2 new lines after each of these characters: ., ? and :
