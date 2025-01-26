@@ -1,0 +1,28 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Lorem ipsum.a ?r: .  ?: ")
+Lorem ipsum.
+<BLANKLINE>
+a ?
+<BLANKLINE>
+r:
+<BLANKLINE>
+.
+<BLANKLINE>
+?
+<BLANKLINE>
+:
+<BLANKLINE>
+>>> try:
+...     text_indentation(123)
+... except Exception as e:
+...     print(e)
+text must be a string
+>>> text_indentation("Hello. World? Yes: No.")
+Hello.
+<BLANKLINE>
+World?
+<BLANKLINE>
+Yes:
+<BLANKLINE>
+No.
+<BLANKLINE>
