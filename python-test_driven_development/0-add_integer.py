@@ -27,4 +27,17 @@ def add_integer(a, b=98):
         raise TypeError("a must be an integer")
     if not isinstance(b, (int, float)):
         raise TypeError("b must be an integer")
-    return int(a) + int(b)
+    if a != a or b != b:  # Check for NaN
+        raise ValueError("cannot convert float NaN to integer")
+    # Check for infinity
+    if abs(a) == float('inf') or abs(b) == float('inf'):
+        raise OverflowError("value too large to convert to int")
+    
+    # Check for large float values
+    if abs(a) > 1e308 or abs(b) > 1e308:
+        raise OverflowError("value too large to convert to int")
+    
+    sum_ab = int(a) + int(b)
+    if abs(sum_ab) > 1e308:  # Check for overflow in the sum
+        raise OverflowError("sum too large to convert to int")
+    return sum_ab
