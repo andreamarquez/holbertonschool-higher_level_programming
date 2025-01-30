@@ -1,4 +1,16 @@
 #!/usr/bin/python3
+"""
+This module defines a class Rectangle that represents a rectangle.
+
+The Rectangle class includes:
+- Private instance attributes `__width` and `__height` to store
+  the dimensions of the rectangle.
+- A constructor to initialize the width and height with validation.
+- Properties to retrieve the width and height.
+- Property setters to set the width and height with validation.
+"""
+
+
 class Rectangle:
     """
     This class represents a rectangle with private width and height attributes.
@@ -67,7 +79,8 @@ class Rectangle:
         Sets the height of the rectangle with validation.
 
         Args:
-            value (int): The height of the rectangle. Must be an integer >= 0.
+            value (int): The height of the rectangle.
+            Must be an integer >= 0.
 
         Raises:
             TypeError: If value is not an integer.
