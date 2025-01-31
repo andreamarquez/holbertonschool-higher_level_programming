@@ -3,16 +3,21 @@
 This module defines a class Rectangle that represents a rectangle.
 
 The Rectangle class includes:
-- Private instance attributes `__width` and `__height` to store the dimensions of the rectangle.
+- Private instance attributes `__width` and `__height` to store
+the dimensions of the rectangle.
 - A constructor to initialize the width and height with validation.
 - Properties to retrieve the width and height.
 - Property setters to set the width and height with validation.
 - A method to calculate the area of the rectangle.
 - A method to calculate the perimeter of the rectangle.
-- A method to return a string representation of the rectangle using the character #.
-- A method to return a string representation of the rectangle to be able to recreate a new instance by using eval().
-- A method to print the message 'Bye rectangle...' when an instance of Rectangle is deleted.
+- A method to return a string representation of the rectangle
+using the character #.
+- A method to return a string representation of the rectangle to
+be able to recreate a new instance by using eval().
+- A method to print the message 'Bye rectangle...' when an
+instance of Rectangle is deleted.
 """
+
 
 class Rectangle:
     """
@@ -131,7 +136,8 @@ class Rectangle:
 
     def __repr__(self):
         """
-        Returns a string representation of the rectangle to be able to recreate a new instance by using eval().
+        Returns a string representation of the rectangle to be able to
+        recreate a new instance by using eval().
 
         Returns:
             str: The string representation of the rectangle.
@@ -140,6 +146,7 @@ class Rectangle:
 
     def __del__(self):
         """
-        Prints the message 'Bye rectangle...' when an instance of Rectangle is deleted.
+        Prints the message 'Bye rectangle...' when an instance
+        of Rectangle is deleted.
         """
         print("Bye rectangle...")
