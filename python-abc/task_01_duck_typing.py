@@ -54,7 +54,7 @@ class Circle(Shape):
         radius (float): The radius of the circle.
     """
 
-    def __init__(self, radius = 0):
+    def __init__(self, radius=0):
         """
         Initialize a new Circle instance.
 
@@ -91,7 +91,7 @@ class Rectangle(Shape):
         height (float): The height of the rectangle.
     """
 
-    def __init__(self, width = 0, height = 0):
+    def __init__(self, width=0, height=0):
         """
         Initialize a new Rectangle instance.
 
