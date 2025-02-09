@@ -5,9 +5,9 @@ This module defines a class `BaseGeometry`.
 The `BaseGeometry` class:
 - Serves as a base for geometry-related classes.
 - Includes a public instance method `area` that raises an Exception
-with the message 'area() is not implemented'.
+  with the message 'area() is not implemented'.
 - Includes a public instance method `integer_validator` that validates
-the value.
+  the value.
 """
 
 
@@ -19,6 +19,9 @@ class BaseGeometry:
     def area(self):
         """
         Raises an Exception with the message 'area() is not implemented'.
+
+        This method is intended to be overridden in subclasses to provide
+        the area calculation for specific geometric shapes.
         """
         raise Exception("area() is not implemented")
 
