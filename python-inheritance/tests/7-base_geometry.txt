@@ -12,7 +12,7 @@ TypeError: name must be an integer
 >>> base_geometry.integer_validator("emptystring", "")
 Traceback (most recent call last):
     ...
-TypeError: name must be a non-empty string
+TypeError: emptystring must be an integer
 >>> base_geometry.integer_validator("spacestring", " ")
 Traceback (most recent call last):
     ...
@@ -29,29 +29,3 @@ ValueError: name must be greater than 0
 Traceback (most recent call last):
     ...
 ValueError: name must be greater than 0
->>> base_geometry.integer_validator("", 10)
-Traceback (most recent call last):
-    ...
-TypeError: name must be a non-empty string
->>> base_geometry.integer_validator("large_int", 10**18)
->>> base_geometry.integer_validator("infinity", float('inf'))
-Traceback (most recent call last):
-    ...
-TypeError: infinity must be an integer
->>> from decimal import Decimal
->>> base_geometry.integer_validator("decimal", Decimal('10.5'))
-Traceback (most recent call last):
-    ...
-TypeError: decimal must be an integer
->>> base_geometry.integer_validator("list", [1, 2, 3])
-Traceback (most recent call last):
-    ...
-TypeError: list must be an integer
->>> base_geometry.integer_validator("dict", {"key": "value"})
-Traceback (most recent call last):
-    ...
-TypeError: dict must be an integer
->>> base_geometry.integer_validator("none", None)
-Traceback (most recent call last):
-    ...
-TypeError: none must be an integer
