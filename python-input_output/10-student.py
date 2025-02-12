@@ -1,4 +1,12 @@
 #!/usr/bin/python3
+"""
+This module defines a Student class.
+
+Classes:
+    Student: A class used to represent a Student.
+"""
+
+
 class Student:
     """
     A class used to represent a Student.
@@ -35,9 +43,14 @@ class Student:
             dict: A dictionary containing the instance's attributes.
         """
         if attrs is None:
-            return self.__dict__
+            return {
+                'age': self.age,
+                'last_name': self.last_name,
+                'first_name': self.first_name
+            }
         else:
             return {
-                attr: self.__dict__[attr]
-                for attr in attrs if attr in self.__dict__
+                attr: getattr(self, attr)
+                for attr in attrs
+                if hasattr(self, attr)
             }
