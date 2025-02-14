@@ -6,6 +6,7 @@ Classes:
     Student: A class used to represent a Student.
 """
 
+
 class Student:
     """
     A class used to represent a Student.
@@ -49,7 +50,9 @@ class Student:
             }
         else:
             return {
-                attr: getattr(self, attr) for attr in attrs if hasattr(self, attr)
+                attr: getattr(self, attr)
+                for attr in attrs
+                if hasattr(self, attr)
             }
 
     def reload_from_json(self, json):
