@@ -24,12 +24,12 @@ class SimpleAPIHandler(http.server.BaseHTTPRequestHandler):
             self.send_response(200)
             self.send_header("Content-type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps({"message": "info endpoint"}).encode("utf-8"))
+            self.wfile.write(json.dumps({"version": "1.0", "description": "A simple API built with http.server"}).encode("utf-8"))
         else:
             self.send_response(404)
-            self.send_header("Content-type", "application/json")
+            self.send_header('Content-type', 'text/plain')
             self.end_headers()
-            self.wfile.write(json.dumps({"error": "Endpoint not found"}).encode("utf-8"))
+            self.wfile.write(b'Endpoint not found')
 
 PORT = 8000
 with socketserver.TCPServer(("", PORT), SimpleAPIHandler) as httpd:
