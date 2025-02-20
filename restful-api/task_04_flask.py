@@ -42,10 +42,8 @@ def add_user():
     username = new_user.get('username')
     if not username:
         return jsonify({"error": "Username is required"}), 400
-    if username in users:
-        return jsonify({"error": "User already exists"}), 400
     users[username] = new_user
-    return jsonify({"message": "User added successfully", "user": new_user}), 201
+    return jsonify({"message": "User added", "user": new_user}), 201
 
 if __name__ == '__main__':
     app.run(port=5000)
