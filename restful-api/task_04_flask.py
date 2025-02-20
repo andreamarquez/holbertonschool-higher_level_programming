@@ -2,11 +2,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-users = {
-    "user1": {"username": "user1", "name": "John Doe", "age": 30, "city": "New York"},
-    "user2": {"username": "user2", "name": "Jane Doe", "age": 25, "city": "Los Angeles"},
-    "user3": {"username": "user3", "name": "Jim Doe", "age": 35, "city": "Chicago"}
-}
+users = {}
 
 @app.route('/')
 def home():
