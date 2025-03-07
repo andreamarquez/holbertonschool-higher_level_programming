@@ -3,7 +3,9 @@
 import MySQLdb
 import sys
 
+
 def main():
+
     # Get MySQL credentials from command line arguments
     mysql_user = sys.argv[1]
     mysql_password = sys.argv[2]
@@ -34,6 +36,7 @@ def main():
     # Close the cursor and connection
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     main()
