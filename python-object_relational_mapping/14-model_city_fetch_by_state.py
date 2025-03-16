@@ -5,15 +5,15 @@ import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import State, Base
-from model_city import City  # N'oubliez pas d'importer la classe City !
+from model_city import City  # Don't forget to import the City class!
 
 if __name__ == "__main__":
 
-    # Vérification du nombre d'arguments
+    # Check the number of arguments
     if len(sys.argv) != 4:
         exit(1)
 
-    # Connexion à la base de données
+    # Connect to the database
     username = sys.argv[1]
     password = sys.argv[2]
     db_name = sys.argv[3]
@@ -24,16 +24,16 @@ if __name__ == "__main__":
         pool_pre_ping=True
     )
 
-    # Création de la session
+    # Create the session
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # Interroger les villes et les états associés
+    # Query the cities and associated states
     cities = session.query(City, State).join(State).order_by(City.id).all()
 
-    # Affichage des résultats
+    # Display the results
     for city, state in cities:
         print(f"{state.name}: ({city.id}) {city.name}")
 
-    # Fermeture de la session
+    # Close the session
     session.close()
