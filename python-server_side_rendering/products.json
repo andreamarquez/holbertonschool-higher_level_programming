@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Laptop",
+        "category": "Electronics",
+        "price": 799.99
+    },
+    {
+        "id": 2,
+        "name": "Coffee Mug",
+        "category": "Home Goods",
+        "price": 15.99
+    },
+    {
+        "id": 3,
+        "name": "Wireless Mouse",
+        "category": "Electronics",
+        "price": 25.49
+    },
+    {
+        "id": 4,
+        "name": "Notebook",
+        "category": "Stationery",
+        "price": 3.99
+    },
+    {
+        "id": 5,
+        "name": "Water Bottle",
+        "category": "Home Goods",
+        "price": 12.99
+    }
+]
